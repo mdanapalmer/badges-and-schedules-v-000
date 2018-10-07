@@ -9,11 +9,7 @@ def batch_badge_creator(names)
 end
 
  def assign_rooms(rooms)
-   combo = []
-   rooms.each_with_index do |name, i|
-     combo << "Hello, #{name}! You'll be assigned to room #{i + 1}!"
- end
- combo
+   rooms.each_with_index.map { |name, i| "Hello, #{name}! You'll be assigned to room #{i + 1}!" }
  end
 
  def printer(attendees)
